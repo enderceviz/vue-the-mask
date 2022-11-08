@@ -11,9 +11,9 @@ A lightweight (2KB gzipped) and dependency free mask input created specific for 
 ## Install
 
 ```
-yarn add vue-the-mask
+yarn add @enderceviz/vue-the-mask
 or
-npm i -S vue-the-mask
+npm i -S @enderceviz/vue-the-mask
 ```
 
 ## Usage (two flavors)
