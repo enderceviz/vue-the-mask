@@ -4,6 +4,9 @@ export default function maskit (value, mask, masked = true, tokens) {
   var iMask = 0
   var iValue = 0
   var output = ''
+  if(tokens.replace && tokens.replace.delete.length) {
+    tokens.replace.delete.map(item => value = value.replace(/\s+/g, '').replace(item, ''))
+  }
   while (iMask < mask.length && iValue < value.length) {
     var cMask = mask[iMask]
     var masker = tokens[cMask]
@@ -35,6 +38,10 @@ export default function maskit (value, mask, masked = true, tokens) {
     }
     restOutput += cMask
     iMask++
+  }
+
+  if(tokens.keyCode46 && tokens.keyCode46.find(item => item === output[output.length - 1])) {
+    output = output.slice(0, -1)
   }
 
   return output + restOutput

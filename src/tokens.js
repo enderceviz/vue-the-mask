@@ -4,7 +4,9 @@ export default {
   S: { pattern: /[a-zA-Z]/ },
   A: { pattern: /[a-zA-Z]/, transform: v => v.toLocaleUpperCase() },
   a: { pattern: /[a-zA-Z]/, transform: v => v.toLocaleLowerCase() },
-  '!': { escape: true }
+  '!': { escape: true },
+  replace: { delete: [] },
+  keyCode46: []
 }
 
 // https://github.com/fernandofleury/vanilla-masker/blob/master/lib/vanilla-masker.js
