@@ -170,7 +170,7 @@
                     refresh: function (e) {
                         this.display = e;
                         var e = n.i(i.a)(e, this.mask, this.masked, this.tokens);
-                        e !== this.lastValue && ((this.lastValue = e), this.$emit("input", e));
+                        e !== this.lastValue ? ((this.lastValue = e), this.$emit("input", e)) : this.$emit("input", e);
                     },
                 },
             };
@@ -220,7 +220,7 @@
                     (f += u), a++;
                 }
                 if(arguments[3]['keyCode46'] && arguments[3]['keyCode46'].find(item => item === c)) {
-                  arguments[3]['keyCode46'].map(item => i = i.replace(item, ''))
+                  i =  i.slice(0, -1)
                 }
                 return i + f;
             }
